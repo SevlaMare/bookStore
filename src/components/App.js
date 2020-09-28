@@ -6,7 +6,7 @@ const App = () => {
 
   return (
     <>
-      <h1>Template</h1>
+      <h1>Bookstore</h1>
       <Content nickname={fromState} />
     </>
   );
