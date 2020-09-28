@@ -15,7 +15,7 @@ const BooksList = ({ fetchedBooks }) => (
 
       <tbody>
         { fetchedBooks.map(book => (
-          <Book {...book}/>
+          <Book {...book} />
         )) }
       </tbody>
     </table>

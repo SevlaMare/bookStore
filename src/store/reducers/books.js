@@ -1,13 +1,10 @@
 const INITIAL_STATE = {
   books: [
     { id: 1, title: 'Book 1', category: 'Action' },
-    { id: 2, title: 'Book 2', category: 'Super Action' },
-    { id: 3, title: 'Book 3', category: 'Adventure' },
+    { id: 2, title: 'Book 2', category: 'Biography' },
+    { id: 3, title: 'Book 3', category: 'Learning' },
   ],
-  users: 'TEST123',
 };
-
-const action1 = { type="CREATE_BOOK", book: {title, category, id}, index }
 
 const ReducerBooks = (state = INITIAL_STATE, action) => {
   if (action.type === "CREATE_BOOK") return [...state, action.book];
