@@ -22,6 +22,8 @@ const BooksList = ({ fetchedBooks }) => (
   </>
 );
 
+// TODO: specify reducer on component
+
 export default connect(state => ({
-  fetchedBooks: state.books,
+  fetchedBooks: state.ReducerBooks.books,
 }))(BooksList);
