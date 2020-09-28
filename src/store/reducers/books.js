@@ -7,8 +7,13 @@ const INITIAL_STATE = {
   users: 'TEST123',
 };
 
-const ReducerBooks = (state = INITIAL_STATE, action) =>
-// if (type.action == "ADD_BOOK") { NEW_STATE}
+// const action1 = { type="CREATE_BOOK", book: {title, category, id}, index }
 
-  state;
+const ReducerBooks = (state = INITIAL_STATE, action) => {
+  if (action.type == "CREATE_BOOK") return [...state, action.book]
+  if (action.type == "REMOVE_BOOK") return [...state.slice(0, index), ...state.slice(index + 1) ]
+
+  return state;
+}
+
 export default ReducerBooks;
