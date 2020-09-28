@@ -25,4 +25,3 @@ ReactDOM.render(
   document.querySelector('#app'),
 );
 
-export default INITIAL_STATE;
