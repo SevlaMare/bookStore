@@ -1,7 +1,7 @@
 import React from 'react';
 import { connect } from 'react-redux';
 
-const BooksList = ({fetchedBooks}) => (
+const BooksList = ({ fetchedBooks }) => (
   <>
     <table>
       <thead>
@@ -13,18 +13,18 @@ const BooksList = ({fetchedBooks}) => (
       </thead>
 
       <tbody>
-        { fetchedBooks.map(book =>
+        { fetchedBooks.map(book => (
           <tr key={book.id}>
             <td>{book.id}</td>
             <td>{book.title}</td>
             <td>{book.category}</td>
           </tr>
-          ) }
+        )) }
       </tbody>
     </table>
   </>
 );
 
 export default connect(state => ({
-  fetchedBooks: state.books
+  fetchedBooks: state.books,
 }))(BooksList);

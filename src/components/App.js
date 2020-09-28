@@ -1,19 +1,17 @@
 import React from 'react';
 
-import store from '../store/index'
 import { Provider } from 'react-redux';
+import store from '../store/index';
 
 import BooksList from './BooksList';
 
-const App = () => {
-  return (
-    <Provider store={store}>
-      <div>
-        <BooksList />
-        {/* <BooksForm /> */}
-      </div>
-    </Provider>
-  );
-};
+const App = () => (
+  <Provider store={store}>
+    <div>
+      <BooksList />
+      {/* <BooksForm /> */}
+    </div>
+  </Provider>
+);
 
 export default App;
