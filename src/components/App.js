@@ -1,12 +1,19 @@
-import React, { useState } from 'react';
-import Content from './Content'
+import React from 'react';
+
+import store from '../store/index'
+import { Provider } from 'react-redux';
 
 import BooksList from './BooksList';
 
 const App = () => {
-  return (<>
-    <BooksList />
-  </>);
+  return (
+    <Provider store={store}>
+      <div>
+        <BooksList />
+        {/* <BooksForm /> */}
+      </div>
+    </Provider>
+  );
 };
 
 export default App;
