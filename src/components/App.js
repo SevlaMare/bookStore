@@ -1,15 +1,12 @@
-import React, { Component, useState } from 'react';
+import React, { useState } from 'react';
 import Content from './Content'
 
-const App = props => {
-  const [ fromState ] = useState('StateName');
+import BooksList from './BooksList';
 
-  return (
-    <React.Fragment>
-      <h1>Template</h1>
-      <Content nickname={ fromState }></Content>
-    </React.Fragment>
-  );
-}
+const App = () => {
+  return (<>
+    <BooksList />
+  </>);
+};
 
 export default App;
