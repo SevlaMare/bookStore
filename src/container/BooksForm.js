@@ -13,8 +13,6 @@ const BooksForm = ({ fetchedBooks }) => {
     event.persist();
 
     setNewBook(state =>
-    // console.log(state);
-
       ({
         ...state,
         title: event.target.value,
