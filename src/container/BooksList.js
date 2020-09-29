@@ -3,10 +3,10 @@ import { connect } from 'react-redux';
 import PropTypes from 'prop-types';
 import Book from '../components/Book';
 
-const BooksList = ({ fetchedBooks }) => {
-  // const { id, title, category } = fetchedBooks;
-  
-  return (
+const BooksList = ({ fetchedBooks }) =>
+// const { id, title, category } = fetchedBooks;
+
+  (
     <table>
       <thead>
         <tr>
@@ -23,7 +23,6 @@ const BooksList = ({ fetchedBooks }) => {
       </tbody>
     </table>
   );
-}
 
 BooksList.propTypes = {
   fetchedBooks: PropTypes.arrayOf(
@@ -40,6 +39,5 @@ BooksList.defaultProps = {
 };
 
 export default connect(state => ({
-  fetchedBooks: state.books,
-  // fetchedBooks: state.ReducerBooks,
+  fetchedBooks: state.ReducerBooks.books,
 }))(BooksList);
