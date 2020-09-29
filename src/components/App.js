@@ -1,7 +1,7 @@
 import React from 'react';
 
-import BooksList from './BooksList';
-import BooksForm from './BooksForm';
+import BooksList from '../container/BooksList';
+import BooksForm from '../container/BooksForm';
 
 const App = () => (
   <div>

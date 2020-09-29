@@ -1,6 +1,6 @@
 import React from 'react';
 import { connect } from 'react-redux';
-import Book from './Book';
+import Book from '../components/Book';
 
 const BooksList = ({ fetchedBooks }) => (
   <>
@@ -25,5 +25,5 @@ const BooksList = ({ fetchedBooks }) => (
 // TODO: specify reducer on component
 
 export default connect(state => ({
-  fetchedBooks: state.ReducerBooks.books,
+  fetchedBooks: state.ReducerBooks,
 }))(BooksList);

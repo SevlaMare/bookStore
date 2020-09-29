@@ -6,7 +6,7 @@ import './css/style.css';
 import { Provider } from 'react-redux';
 
 import { createStore } from 'redux';
-import combineReducers from './store/reducers/index';
+import combineReducers from './reducers/index';
 
 const INITIAL_STATE = {
   books: [
@@ -24,4 +24,3 @@ ReactDOM.render(
   </Provider>,
   document.querySelector('#app'),
 );
-
