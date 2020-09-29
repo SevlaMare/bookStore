@@ -6,7 +6,6 @@ const INITIAL_STATE = {
   ],
 };
 
-// const ReducerBooks = (state = [], action) => {
 const ReducerBooks = (state = INITIAL_STATE, action) => {
   if (action.type === 'CREATE_BOOK') return [...state, action.book];
   if (action.type === 'REMOVE_BOOK') return [...state.slice(0, action.index), ...state.slice(action.index + 1)];
