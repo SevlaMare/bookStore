@@ -20,7 +20,7 @@ Book.propTypes = {
 };
 
 Book.defaultProps = {
-  id: Math.floor(),
+  id: Math.random(),
 };
 
 export default Book;
