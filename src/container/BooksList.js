@@ -1,5 +1,6 @@
 import React from 'react';
 import { connect } from 'react-redux';
+import PropTypes from 'prop-types';
 import Book from '../components/Book';
 
 const BooksList = ({ fetchedBooks }) => (
@@ -15,14 +16,22 @@ const BooksList = ({ fetchedBooks }) => (
 
       <tbody>
         { fetchedBooks.map(book => (
-          <Book {...book} />
+          <Book key={book.id} {...book} />
         )) }
       </tbody>
     </table>
   </>
 );
 
-// TODO: specify reducer on component
+BooksList.propTypes = {
+  fetchedBooks: PropTypes.arrayOf(
+    PropTypes.shape({
+      id: PropTypes.number.isRequired,
+      title: PropTypes.string.isRequired,
+      category: PropTypes.string.isRequired,
+    }),
+  ),
+};
 
 export default connect(state => ({
   fetchedBooks: state.ReducerBooks,
