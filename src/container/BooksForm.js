@@ -4,19 +4,19 @@ const categories = ['Action', 'Biography', 'History', 'Horror', 'Kids', 'Learnin
 
 const BooksForm = () => (
   <form>
-    <div>
-      <label htmlFor="title">Title:</label>
+    <label htmlFor="title">
+      Title:
       <input type="text" id="title" name="title" />
-    </div>
-    <div>
-      <label htmlFor="category">Category:</label>
+    </label>
+
+    <label htmlFor="category">
+      Category:
       <select type="text" id="category" name="category">
         { categories.map(category => <option key={category}>{category}</option>)}
       </select>
-    </div>
-    <div>
-      <button type="submit">Submit</button>
-    </div>
+    </label>
+
+    <button type="submit">Submit</button>
   </form>
 );
 
