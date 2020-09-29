@@ -22,10 +22,10 @@ const BooksForm = ({ fetchedBooks }) => {
       }));
   };
 
-  const handleSubmit = (event) => {
-    event.preventDefault()
+  const handleSubmit = event => {
+    event.preventDefault();
     dispatch(createBook(newBook));
-  }
+  };
 
   return (
     <form>
