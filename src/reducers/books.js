@@ -10,8 +10,6 @@ const ReducerBooks = (state = INITIAL_STATE, action) => {
   if (action.type === 'CREATE_BOOK') return { books: [...state.books, action.book] };
   if (action.type === 'REMOVE_BOOK') {
     const index = state.books.findIndex(b => b.id === action.book.id);
-    console.log(action);
-    console.log(index);
     return { books: [...state.books.slice(0, index), ...state.books.slice(index + 1)] };
   }
 
