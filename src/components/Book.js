@@ -16,7 +16,7 @@ const Book = props => {
 Book.propTypes = {
   id: PropTypes.number,
   title: PropTypes.string.isRequired,
-  category: PropTypes.func.isRequired,
+  category: PropTypes.string.isRequired,
 };
 
 Book.defaultProps = {
