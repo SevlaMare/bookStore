@@ -1,11 +1,11 @@
 import React, { useState } from 'react';
-import { connect, useDispatch } from 'react-redux';
+import { connect } from 'react-redux';
+import PropTypes from 'prop-types';
 import { createBook } from '../actions';
 
 const categories = ['Action', 'Biography', 'History', 'Horror', 'Kids', 'Learning', 'Sci-Fi'];
 
-const BooksForm = () => {
-  const dispatch = useDispatch();
+const BooksForm = ({ createBook }) => {
   const [newBook, setNewBook] = useState({ title: '', category: '' });
 
   const handleChange = event => {
@@ -18,21 +18,37 @@ const BooksForm = () => {
   };
 
   const handleSubmit = event => {
+    createBook(newBook);
+    setNewBook({ title: '', category: '' });
     event.preventDefault();
-    dispatch(createBook(newBook));
   };
 
   return (
     <form>
       <label htmlFor="title">
         Title:
-        <input type="text" id="title" name="title" onChange={handleChange} />
+        <input
+          type="text"
+          id="title"
+          name="title"
+          onChange={handleChange}
+          value={newBook.title} />
       </label>
 
       <label htmlFor="category">
         Category:
-        <select type="text" id="category" name="category" onChange={handleChange}>
-          { categories.map(category => <option key={category} value={category}>{category}</option>)}
+        <select
+          type="text"
+          id="category"
+          name="category"
+          onChange={handleChange}>
+          { categories.map(category =>
+            <option
+              key={category}
+              value={category}
+            >
+              {category}
+            </option>) }
         </select>
       </label>
 
@@ -46,10 +62,15 @@ const BooksForm = () => {
   );
 };
 
+BooksForm.propTypes = {
+  createBook: PropTypes.shape().isRequired,
+};
+
 const mapDispatchToProps = dispatch => ({
-  remove: book => { dispatch(removeBook(book)); },
+  createBook: book => { dispatch(createBook(book)); },
 });
 
-export default connect(state => ({
-  fetchedBooks: state.ReducerBooks.books,
-}))(BooksForm);
+export default connect(
+  null,
+  mapDispatchToProps,
+)(BooksForm);
