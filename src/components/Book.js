@@ -22,7 +22,7 @@ Book.propTypes = {
   id: PropTypes.number.isRequired,
   title: PropTypes.string.isRequired,
   category: PropTypes.string.isRequired,
-  children: PropTypes.func.isRequired,
+  children: PropTypes.shape().isRequired,
 };
 
 export default Book;

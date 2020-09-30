@@ -6,7 +6,7 @@ import { createBook } from '../actions';
 const categories = ['Action', 'Biography', 'History', 'Horror', 'Kids', 'Learning', 'Sci-Fi'];
 
 const BooksForm = ({ createBook }) => {
-  const [newBook, setNewBook] = useState({ title: '', category: '' });
+  const [newBook, setNewBook] = useState({ title: '', category: 'Action' });
 
   const handleChange = event => {
     event.persist();
@@ -19,7 +19,7 @@ const BooksForm = ({ createBook }) => {
 
   const handleSubmit = event => {
     createBook(newBook);
-    setNewBook({ title: '', category: '' });
+    setNewBook({ title: '', category: 'Action' });
     event.preventDefault();
   };
 
