@@ -1,14 +1,11 @@
 import React from 'react';
 import PropTypes from 'prop-types';
 import Book from '../components/Book';
-import { connect, useDispatch } from 'react-redux';
+import { connect } from 'react-redux';
 import { removeBook } from '../actions';
 
-const BooksList = ({ fetchedBooks }) => {
-  const dispatch = useDispatch();
-
-  const handleClick = book => { dispatch(removeBook(book)) };
-  // const handleClick = book => { removeBookDispatch };
+const BooksList = ({ fetchedBooks, remove }) => {
+  const handleClick = book => { remove(book) };
 
   return (
     <table>
@@ -43,36 +40,30 @@ const BooksList = ({ fetchedBooks }) => {
   );
 };
 
-BooksList.propTypes = {
-  fetchedBooks: PropTypes.arrayOf(
-    PropTypes.shape({
-      id: PropTypes.number.isRequired,
-      title: PropTypes.string.isRequired,
-      category: PropTypes.string.isRequired,
-    }),
-  ),
-};
+// BooksList.propTypes = {
+//   fetchedBooks: PropTypes.arrayOf(
+//     PropTypes.shape({
+//       id: PropTypes.number.isRequired,
+//       title: PropTypes.string.isRequired,
+//       category: PropTypes.string.isRequired,
+//     }),
+//   ),
+// };
 
-BooksList.defaultProps = {
-  fetchedBooks: PropTypes.array,
-};
+// BooksList.defaultProps = {
+//   fetchedBooks: PropTypes.array,
+// };
 
 // const dispatch = useDispatch();
 
-const mapStateToProps = (state) => {
-  return {
-    fetchedBooks: state.ReducerBooks.books
-  };
-};
+const mapStateToProps = (state) => ({
+  fetchedBooks: state.ReducerBooks.books
+});
 
-const mapDispatchToProps = dispatch => {
-  return {
-    removeBookDispatch: () => { dispatch(addItem()) }
-  };
-};
+const mapDispatchToProps = dispatch => ({
+  remove: (book) => { dispatch(removeBook(book)); }
+});
 
-export default connect(state => (
-  // { fetchedBooks: state.ReducerBooks.books },
-  mapStateToProps
-  // ,mapDispatchToProps
-))(BooksList);
+export default connect(
+  mapStateToProps, mapDispatchToProps
+)(BooksList);
