@@ -2,14 +2,16 @@ import React from 'react';
 import { connect } from 'react-redux';
 
 const CategoryFilter = ({ filter }) => {
-  // TODO: filter books
-  // filter.map(books => {})
+  console.log('ARRAY>>>>>>>', filter)
 
   return (
-    <input type="checkbox"/>
+    <form>
+      <input type="checkbox"/>
+    </form>
   )
 }
 
 export default connect(state => {
+  console.log('state>>>>>>>', state)
   filter: state.FilterBooks.filter
 })(CategoryFilter);
