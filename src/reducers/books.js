@@ -3,7 +3,6 @@ const INITIAL_STATE = {
     { id: 1, title: 'Book 1', category: 'Action' },
     { id: 2, title: 'Book 2', category: 'Biography' },
     { id: 3, title: 'Book 3', category: 'Learning' },
-    { id: 3, title: 'Book 3', category: 'Learning' },
   ],
 };
 
