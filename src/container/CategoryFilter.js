@@ -2,11 +2,10 @@ import React from 'react';
 import { connect } from 'react-redux';
 import CATEGORIES from '../constant'
 
-const CategoryFilter = ({ filter }) => {
-  console.log('ARRAY>>>>>>>', filter)
+const CategoryFilter = ({ categories }) => {
 
   return (
-    <form>
+    <form className='filter'>
       {CATEGORIES.map(category => (
         <label>{category}
           <input type="checkbox" value={category}/>
@@ -17,6 +16,8 @@ const CategoryFilter = ({ filter }) => {
 }
 
 export default connect(state => {
-  console.log('state>>>>>>>', state)
-  filter: state.FilterBooks.filter
+  categories: state.FilterBooks.categories
+  console.log('STATE >>>>>>>', state)
+  console.log('FILTER REDUCER STATE >>>>>>>', state.FilterBooks)
+  console.log('CATEGORIES >>>>>>>', state.FilterBooks.categories)
 })(CategoryFilter);
