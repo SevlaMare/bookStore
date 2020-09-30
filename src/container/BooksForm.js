@@ -1,11 +1,10 @@
 import React, { useState } from 'react';
 import { connect, useDispatch } from 'react-redux';
-import PropTypes from 'prop-types';
 import { createBook } from '../actions';
 
 const categories = ['Action', 'Biography', 'History', 'Horror', 'Kids', 'Learning', 'Sci-Fi'];
 
-const BooksForm = ({ fetchedBooks }) => {
+const BooksForm = () => {
   const dispatch = useDispatch();
   const [newBook, setNewBook] = useState({ title: '', category: '' });
 
@@ -46,20 +45,6 @@ const BooksForm = ({ fetchedBooks }) => {
     </form>
   );
 };
-
-// BooksForm.propTypes = {
-//   fetchedBooks: PropTypes.arrayOf(
-//     PropTypes.shape({
-//       id: PropTypes.number.isRequired,
-//       title: PropTypes.string.isRequired,
-//       category: PropTypes.string.isRequired,
-//     }),
-//   ),
-// };
-
-// BooksForm.defaultProps = {
-//   id: Math.random(),
-// };
 
 export default connect(state => ({
   fetchedBooks: state.ReducerBooks.books,
