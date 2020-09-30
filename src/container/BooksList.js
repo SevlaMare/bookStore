@@ -1,11 +1,11 @@
 import React from 'react';
 import PropTypes from 'prop-types';
-import Book from '../components/Book';
 import { connect } from 'react-redux';
+import Book from '../components/Book';
 import { removeBook } from '../actions';
 
 const BooksList = ({ fetchedBooks, remove }) => {
-  const handleClick = book => { remove(book) };
+  const handleClick = book => { remove(book); };
 
   return (
     <table>
@@ -14,7 +14,7 @@ const BooksList = ({ fetchedBooks, remove }) => {
           <th>Book ID</th>
           <th>Title</th>
           <th>Category</th>
-          <th></th>
+          <th />
         </tr>
       </thead>
 
@@ -33,8 +33,7 @@ const BooksList = ({ fetchedBooks, remove }) => {
               </button>
             </tr>
           </>
-        ))
-        }
+        ))}
       </tbody>
     </table>
   );
@@ -56,14 +55,14 @@ const BooksList = ({ fetchedBooks, remove }) => {
 
 // const dispatch = useDispatch();
 
-const mapStateToProps = (state) => ({
-  fetchedBooks: state.ReducerBooks.books
+const mapStateToProps = state => ({
+  fetchedBooks: state.ReducerBooks.books,
 });
 
 const mapDispatchToProps = dispatch => ({
-  remove: (book) => { dispatch(removeBook(book)); }
+  remove: book => { dispatch(removeBook(book)); },
 });
 
 export default connect(
-  mapStateToProps, mapDispatchToProps
+  mapStateToProps, mapDispatchToProps,
 )(BooksList);

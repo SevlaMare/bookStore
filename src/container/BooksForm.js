@@ -12,11 +12,10 @@ const BooksForm = ({ fetchedBooks }) => {
   const handleChange = event => {
     event.persist();
 
-    setNewBook(state =>
-      ({
-        ...state,
-        [event.target.name]: event.target.value
-      }));
+    setNewBook(state => ({
+      ...state,
+      [event.target.name]: event.target.value,
+    }));
   };
 
   const handleSubmit = event => {
