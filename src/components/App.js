@@ -1,15 +1,13 @@
-import React, { useState } from 'react';
-import Content from './Content';
+import React from 'react';
 
-const App = () => {
-  const [fromState] = useState('StateName');
+import BooksList from '../container/BooksList';
+import BooksForm from '../container/BooksForm';
 
-  return (
-    <>
-      <h1>Bookstore</h1>
-      <Content nickname={fromState} />
-    </>
-  );
-};
+const App = () => (
+  <div>
+    <BooksList />
+    <BooksForm />
+  </div>
+);
 
 export default App;
