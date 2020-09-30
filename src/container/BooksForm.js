@@ -9,14 +9,13 @@ const BooksForm = ({ fetchedBooks }) => {
   const dispatch = useDispatch();
   const [newBook, setNewBook] = useState({ title: '', category: '' });
 
-  const handleTitle = event => {
+  const handleChange = event => {
     event.persist();
 
     setNewBook(state =>
       ({
         ...state,
-        title: event.target.value,
-        category: document.querySelector('#category').value,
+        [event.target.name]: event.target.value
       }));
   };
 
@@ -29,12 +28,12 @@ const BooksForm = ({ fetchedBooks }) => {
     <form>
       <label htmlFor="title">
         Title:
-        <input type="text" id="title" name="title" onChange={handleTitle} />
+        <input type="text" id="title" name="title" onChange={handleChange} />
       </label>
 
       <label htmlFor="category">
         Category:
-        <select type="text" id="category" name="category" onChange={handleTitle}>
+        <select type="text" id="category" name="category" onChange={handleChange}>
           { categories.map(category => <option key={category} value={category}>{category}</option>)}
         </select>
       </label>
