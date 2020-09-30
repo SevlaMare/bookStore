@@ -19,14 +19,10 @@ const Book = props => {
 };
 
 Book.propTypes = {
-  id: PropTypes.number,
+  id: PropTypes.number.isRequired,
   title: PropTypes.string.isRequired,
   category: PropTypes.string.isRequired,
-  children: PropTypes.shape().isRequired,
-};
-
-Book.defaultProps = {
-  id: Math.random(),
+  children: PropTypes.func.isRequired,
 };
 
 export default Book;

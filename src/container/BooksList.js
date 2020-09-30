@@ -19,24 +19,22 @@ const BooksList = ({ fetchedBooks, remove }) => {
 
       <tbody>
         { fetchedBooks.map(book => (
-          <>
-            <Book
-              key={book.id}
-              id={book.id}
-              title={book.title}
-              category={book.category}
-            >
-              <label htmlFor={`rmv-${book.id}`}>
-                <input
-                  id={`rmv-${book.id}`}
-                  name={`rmv-${book.id}`}
-                  onClick={() => handleClick(book)}
-                  type="button"
-                  value="remove"
-                />
-              </label>
-            </Book>
-          </>
+          <Book
+            key={book.id}
+            id={book.id}
+            title={book.title}
+            category={book.category}
+          >
+            <label htmlFor={`rmv-${book.id}`}>
+              <input
+                id={`rmv-${book.id}`}
+                name={`rmv-${book.id}`}
+                onClick={() => handleClick(book)}
+                type="button"
+                value="remove"
+              />
+            </label>
+          </Book>
         ))}
       </tbody>
     </table>
