@@ -7,10 +7,7 @@ import { removeBook } from '../actions';
 const BooksList = ({ fetchedBooks }) => {
   const dispatch = useDispatch();
 
-  const handleClick = book => {
-    const index = 
-    dispatch(removeBook(book, ))
-  };
+  const handleClick = book => { dispatch(removeBook(book)) };
 
   return (
     <table>
@@ -59,6 +56,17 @@ BooksList.defaultProps = {
   fetchedBooks: PropTypes.array,
 };
 
-export default connect(state => ({
-  fetchedBooks: state.ReducerBooks.books,
-}))(BooksList);
+// const dispatch = useDispatch();
+
+const mapStateToProps = state => ({
+  fetchedBooks: state.ReducerBooks.books
+})
+
+const mapDispatchToProps = state => ({
+  removeBookDispatch: (book) => removeBook(book)
+})
+
+export default connect(state => (
+  mapStateToProps
+  // ,mapDispatchToProps
+))(BooksList);
