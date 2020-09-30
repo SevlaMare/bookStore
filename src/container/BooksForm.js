@@ -41,7 +41,10 @@ const BooksForm = ({ createBook }) => {
           type="text"
           id="category"
           name="category"
-          onChange={handleChange}>
+          onChange={handleChange}
+          required
+          >
+          <option disabled selected value>select category</option>
           { categories.map(category =>
             <option
               key={category}
