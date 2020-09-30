@@ -14,7 +14,6 @@ const BooksList = ({ fetchedBooks, remove }) => {
           <th>Book ID</th>
           <th>Title</th>
           <th>Category</th>
-          <th />
         </tr>
       </thead>
 
@@ -26,12 +25,17 @@ const BooksList = ({ fetchedBooks, remove }) => {
               id={book.id}
               title={book.title}
               category={book.category}
-            />
-            <tr key={`btn-${book.id}`}>
-              <button onClick={() => handleClick(book)}>
-                Remove
-              </button>
-            </tr>
+            >
+              <label htmlFor={`rmv-${book.id}`}>
+                <input
+                  id={`rmv-${book.id}`}
+                  name={`rmv-${book.id}`}
+                  onClick={() => handleClick(book)}
+                  type="button"
+                  value="remove"
+                />
+              </label>
+            </Book>
           </>
         ))}
       </tbody>
@@ -39,21 +43,20 @@ const BooksList = ({ fetchedBooks, remove }) => {
   );
 };
 
-// BooksList.propTypes = {
-//   fetchedBooks: PropTypes.arrayOf(
-//     PropTypes.shape({
-//       id: PropTypes.number.isRequired,
-//       title: PropTypes.string.isRequired,
-//       category: PropTypes.string.isRequired,
-//     }),
-//   ),
-// };
+BooksList.propTypes = {
+  fetchedBooks: PropTypes.arrayOf(
+    PropTypes.shape({
+      id: PropTypes.number.isRequired,
+      title: PropTypes.string.isRequired,
+      category: PropTypes.string.isRequired,
+    }),
+  ),
+  remove: PropTypes.shape().isRequired,
+};
 
-// BooksList.defaultProps = {
-//   fetchedBooks: PropTypes.array,
-// };
-
-// const dispatch = useDispatch();
+BooksList.defaultProps = {
+  fetchedBooks: PropTypes.array,
+};
 
 const mapStateToProps = state => ({
   fetchedBooks: state.ReducerBooks.books,

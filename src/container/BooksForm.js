@@ -46,6 +46,10 @@ const BooksForm = () => {
   );
 };
 
+const mapDispatchToProps = dispatch => ({
+  remove: book => { dispatch(removeBook(book)); },
+});
+
 export default connect(state => ({
   fetchedBooks: state.ReducerBooks.books,
 }))(BooksForm);

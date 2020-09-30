@@ -10,10 +10,10 @@ const INITIAL_STATE = {
 const ReducerBooks = (state = INITIAL_STATE, action) => {
   if (action.type === 'CREATE_BOOK') {
     const id = Math.random();
-    const bookWithId = {...action.book, id};
+    const bookWithId = { ...action.book, id };
 
-    return { 
-      books: [...state.books, bookWithId] 
+    return {
+      books: [...state.books, bookWithId],
     };
   }
   if (action.type === 'REMOVE_BOOK') {
