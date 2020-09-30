@@ -51,7 +51,7 @@ BooksList.propTypes = {
       category: PropTypes.string.isRequired,
     }),
   ),
-  remove: PropTypes.shape().isRequired,
+  remove: PropTypes.func.isRequired,
 };
 
 BooksList.defaultProps = {

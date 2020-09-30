@@ -32,7 +32,8 @@ const BooksForm = ({ createBook }) => {
           id="title"
           name="title"
           onChange={handleChange}
-          value={newBook.title} />
+          value={newBook.title}
+        />
       </label>
 
       <label htmlFor="category">
@@ -43,15 +44,16 @@ const BooksForm = ({ createBook }) => {
           name="category"
           onChange={handleChange}
           required
-          >
-          <option disabled selected value>select category</option>
-          { categories.map(category =>
+        >
+
+          { categories.map(category => (
             <option
               key={category}
               value={category}
             >
               {category}
-            </option>) }
+            </option>
+          )) }
         </select>
       </label>
 
@@ -66,7 +68,7 @@ const BooksForm = ({ createBook }) => {
 };
 
 BooksForm.propTypes = {
-  createBook: PropTypes.shape().isRequired,
+  createBook: PropTypes.func.isRequired,
 };
 
 const mapDispatchToProps = dispatch => ({
