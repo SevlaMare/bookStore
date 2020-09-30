@@ -1,8 +1,6 @@
-const INITIAL_FILTER_STATE = {
-  filter: ['Action', 'Biography', 'History', 'Horror', 'Kids', 'Learning', 'Sci-Fi']
-};
+import CATEGORIES from '../constant'
 
-const FilterBooks = (state = INITIAL_FILTER_STATE, action) => {
+const FilterBooks = (state = CATEGORIES, action) => {
   // if (action.type === 'CREATE_BOOK') return state
 
   return state;

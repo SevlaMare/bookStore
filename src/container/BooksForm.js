@@ -2,8 +2,7 @@ import React, { useState } from 'react';
 import { connect } from 'react-redux';
 import PropTypes from 'prop-types';
 import { createBook } from '../actions';
-
-const categories = ['Action', 'Biography', 'History', 'Horror', 'Kids', 'Learning', 'Sci-Fi'];
+import CATEGORIES from '../constant';
 
 const BooksForm = ({ createBook }) => {
   const [newBook, setNewBook] = useState({ title: '', category: 'Action' });
@@ -46,7 +45,7 @@ const BooksForm = ({ createBook }) => {
           value={newBook.category}
           required
         >
-          { categories.map(category => (
+          { CATEGORIES.map(category => (
             <option
               key={category}
               value={category}
