@@ -8,15 +8,7 @@ const BooksList = ({ fetchedBooks, remove }) => {
   const handleClick = book => { remove(book); };
 
   return (
-    <table>
-      <thead>
-        <tr>
-          <th>Book ID</th>
-          <th>Title</th>
-          <th>Category</th>
-        </tr>
-      </thead>
-
+    <table className={"bookstore"}>
       <tbody>
         { fetchedBooks.map(book => (
           <Book
