@@ -4,7 +4,7 @@ import { connect } from 'react-redux';
 import Book from '../components/Book';
 import { removeBook } from '../actions/index';
 
-const BooksList = ({ fetchedBooks, remove }) => {
+const BooksList = ({ categ, fetchedBooks, remove }) => {
   const handleClick = book => { remove(book); };
 
   return (
@@ -57,7 +57,9 @@ BooksList.defaultProps = {
 };
 
 const mapStateToProps = state => ({
-  fetchedBooks: state.book.books,
+  // categ: state.filter,
+  fetchedBooks: state.book.books.filter(book =>
+    book.category === (state.filter || book.category) ),
 });
 
 const mapDispatchToProps = dispatch => ({
