@@ -1,15 +1,15 @@
 import React from 'react';
+import PropTypes from 'prop-types';
 import { connect } from 'react-redux';
 import { filterBooks } from '../actions/index';
 
-import CATEGORIES from '../constants'
+import CATEGORIES from '../constants';
 
 const CategoryFilter = ({ filterBooks }) => {
-  const handleFilterChange = event =>
-    filterBooks(event.target.value);
+  const handleFilterChange = event => filterBooks(event.target.value);
 
   return (
-    <form className='filter'>
+    <form className="filter">
       <select
         type="text"
         id="category"
@@ -17,18 +17,22 @@ const CategoryFilter = ({ filterBooks }) => {
         onChange={handleFilterChange}
         required
       >
-        <option value='all'>all</option>
+        <option key="all" value="all">all</option>
         { CATEGORIES.map(category => (
-            <option value={category}>
-              {category}
-            </option>
+          <option key={category} value={category}>
+            {category}
+          </option>
         ))}
       </select>
     </form>
-  )
-}
+  );
+};
+
+CategoryFilter.propTypes = {
+  filterBooks: PropTypes.func.isRequired,
+};
 
 export default connect(
   null,
-  { filterBooks }
+  { filterBooks },
 )(CategoryFilter);
