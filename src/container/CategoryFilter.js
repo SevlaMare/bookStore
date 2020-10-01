@@ -3,8 +3,8 @@ import { connect } from 'react-redux';
 
 import CATEGORIES from '../constants'
 
-const CategoryFilter = ({ categories }) => {
-  console.log('ARRAY>>>>>>>', categories)
+const CategoryFilter = ({ etc }) => {
+  console.log('ARRAY>>>>>>>', etc)
 
   return (
     <form className='filter'>
@@ -17,8 +17,12 @@ const CategoryFilter = ({ categories }) => {
   )
 }
 
-const mapStateToProps = state => ({
-  categories: state.FilterBooks.categories
-})
+// const mapStateToProps = state => ({
+//   categories: state.FilterBooks.categories
+// })
 
-export default connect(mapStateToProps)(CategoryFilter);
+// export default connect(mapStateToProps)(CategoryFilter);
+export default connect(state => {
+  etc: state.FilterBooks
+  console.log(state)
+})(CategoryFilter);
