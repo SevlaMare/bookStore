@@ -4,9 +4,11 @@ import { filterBooks } from '../actions/index';
 
 import CATEGORIES from '../constants'
 
-const CategoryFilter = ({ categ, applyFilter }) => {
-  const handleFilterChange = event => { applyFilter(event.target.value) };
-  console.log(categ)
+const CategoryFilter = ({ categ, filterBooks }) => {
+  const handleFilterChange = event => {
+    console.log(categ);
+    filterBooks(event.target.value)
+  };
 
   return (
     <form className='filter'>
@@ -30,13 +32,9 @@ const CategoryFilter = ({ categ, applyFilter }) => {
 
 const mapStateToProps = state => ({
   categ: state.filter,
-}, console.log(state.filter));
-
-const mapDispatchToProps = dispatch => ({
-  applyFilter: category => { dispatch(filterBooks(category)); },
-});
+}, console.log('filter:', state.filter));
 
 export default connect(
   mapStateToProps,
-  mapDispatchToProps
+  { filterBooks }
 )(CategoryFilter);
