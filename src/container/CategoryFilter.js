@@ -1,15 +1,12 @@
 import React from 'react';
 import { connect } from 'react-redux';
+import { filterBooks } from '../actions/index';
 
 import CATEGORIES from '../constants'
 
-const CategoryFilter = ({ categ }) => {
-  console.log('ARRAY>>>>>>>', categ)
-
-  const handleFilterChange = event => {
-    console.log(event.target);
-    console.log('changed');
-  };
+const CategoryFilter = ({ categ, applyFilter }) => {
+  const handleFilterChange = event => { applyFilter(event.target.value) };
+  console.log(categ)
 
   return (
     <form className='filter'>
@@ -20,26 +17,23 @@ const CategoryFilter = ({ categ }) => {
         onChange={handleFilterChange}
         required
       >
-        <option
-          key='all'
-          value='all'>all</option>
-
-      { CATEGORIES.map(category => (
-          <option>
-            {category}
-          </option>
-      ))}
+        <option value='all'>all</option>
+        { CATEGORIES.map(category => (
+            <option value={category}>
+              {category}
+            </option>
+        ))}
       </select>
     </form>
   )
 }
 
 const mapStateToProps = state => ({
-  categ: state.filter.filter,
-});
+  categ: state.filter,
+}, console.log(state.filter));
 
 const mapDispatchToProps = dispatch => ({
-  filter: category => { dispatch(filterBook(category)); },
+  applyFilter: category => { dispatch(filterBooks(category)); },
 });
 
 export default connect(

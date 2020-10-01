@@ -6,9 +6,9 @@ import CategoryFilter from '../container/CategoryFilter';
 
 const App = () => (
   <div>
+    <CategoryFilter />
     <BooksList />
     <BooksForm />
-    <CategoryFilter />
   </div>
 );
 

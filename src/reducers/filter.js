@@ -1,9 +1,14 @@
 const INITIAL_STATE = {
-  filter: ['Action', 'Biography', 'History', 'Horror', 'Kids', 'Learning', 'Sci-Fi']
+  filter: ''
 };
 
 const FilterReducer = (state = INITIAL_STATE, action) => {
-  // if (action.type === 'CREATE_BOOK') return state
+  if (action.type === 'CHANGE_FILTER') {
+    console.log('REDUCER>>>', state.filter)
+    console.log('ACTION>>>', action.category)
+
+    return state.filter = action.category
+  }
 
   return state;
 };
