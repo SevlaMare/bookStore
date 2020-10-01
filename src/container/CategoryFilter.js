@@ -6,13 +6,30 @@ import CATEGORIES from '../constants'
 const CategoryFilter = ({ categ }) => {
   console.log('ARRAY>>>>>>>', categ)
 
+  const handleFilterChange = event => {
+    console.log(event.target);
+    console.log('changed');
+  };
+
   return (
     <form className='filter'>
+      <select
+        type="text"
+        id="category"
+        name="category"
+        onChange={handleFilterChange}
+        required
+      >
+        <option
+          key='all'
+          value='all'>all</option>
+
       { CATEGORIES.map(category => (
-        <label>{category}
-          <input type="checkbox" value={category}/>
-        </label>
+          <option>
+            {category}
+          </option>
       ))}
+      </select>
     </form>
   )
 }
@@ -21,11 +38,11 @@ const mapStateToProps = state => ({
   categ: state.filter.filter,
 });
 
-// const mapDispatchToProps = dispatch => ({
-//   filter: book => { dispatch(filterBook(book)); },
-// });
+const mapDispatchToProps = dispatch => ({
+  filter: category => { dispatch(filterBook(category)); },
+});
 
 export default connect(
-  mapStateToProps
-  // , mapDispatchToProps
+  mapStateToProps,
+  mapDispatchToProps
 )(CategoryFilter);
