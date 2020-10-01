@@ -7,8 +7,18 @@ const INITIAL_STATE = {
 };
 
 const ReducerBooks = (state = INITIAL_STATE, action) => {
-  if (action.type === 'CREATE_BOOK') return [...state, action.book];
-  if (action.type === 'REMOVE_BOOK') return [...state.slice(0, action.index), ...state.slice(action.index + 1)];
+  if (action.type === 'CREATE_BOOK') {
+    const id = Math.random();
+    const bookWithId = { ...action.book, id };
+
+    return {
+      books: [...state.books, bookWithId],
+    };
+  }
+  if (action.type === 'REMOVE_BOOK') {
+    const index = state.books.findIndex(b => b.id === action.book.id);
+    return { books: [...state.books.slice(0, index), ...state.books.slice(index + 1)] };
+  }
 
   return state;
 };
