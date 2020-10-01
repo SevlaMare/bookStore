@@ -57,7 +57,6 @@ BooksList.defaultProps = {
 };
 
 const mapStateToProps = state => ({
-  // categ: state.filter,
   fetchedBooks: state.book.books.filter(book =>
     book.category === (state.filter || book.category) ),
 });
