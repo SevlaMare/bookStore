@@ -3,6 +3,6 @@ import ReducerBooks from './books';
 import FilterReducer from './filter';
 
 export default combineReducers({
-  ReducerBooks,
-  FilterReducer
+  book: ReducerBooks,
+  filter: FilterReducer
 });
