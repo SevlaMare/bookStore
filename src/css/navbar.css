@@ -2,16 +2,12 @@ nav {
   display: flex;
   align-content: center;
   justify-content: space-between;
-
-
   height: 61px;
-  width: 1400px;
   padding: 29px 100px;
   background-color: #fff;
 }
 
 .logo {
-  width: 240px;
   height: 37px;
   font-family: Montserrat;
   font-size: 30px;
@@ -23,12 +19,7 @@ nav {
   color: #0290ff;
 }
 
-.float-right {
-  float: right;
-}
-
 .nav-item-2 {
-  width: 59px;
   height: 16px;
   margin-left: 47px;
   font-family: Montserrat;
@@ -42,7 +33,6 @@ nav {
 }
 
 .nav-item-3 {
-  width: 105px;
   height: 16px;
   margin-left: 41px;
   opacity: 0.5;

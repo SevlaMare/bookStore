@@ -23,7 +23,7 @@ const BooksForm = ({ createBook }) => {
   };
 
   return (
-    <form>
+    <form className="newbook">
       <label htmlFor="title">
         <input
           type="text"
@@ -59,6 +59,7 @@ const BooksForm = ({ createBook }) => {
       <button
         type="submit"
         onClick={handleSubmit}
+        className="btn btn-txt-bold"
       >
         ADD BOOK
       </button>
