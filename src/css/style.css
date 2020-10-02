@@ -1,4 +1,9 @@
 body {
-  margin: 0;
+  margin: 20px;
   padding: 0;
+}
+
+.filter {
+  display: flex;
+  flex-direction: column;
 }
