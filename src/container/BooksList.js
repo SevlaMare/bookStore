@@ -9,14 +9,6 @@ const BooksList = ({ fetchedBooks, remove }) => {
 
   return (
     <table>
-      <thead>
-        <tr>
-          <th>Book ID</th>
-          <th>Title</th>
-          <th>Category</th>
-        </tr>
-      </thead>
-
       <tbody>
         { fetchedBooks.map(book => (
           <Book
