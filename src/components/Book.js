@@ -6,17 +6,14 @@ const Book = props => {
 
   return (
     <tr className='book'>
-      <td className="category">{category}</td>
-      <td className="title">{title}</td>
-      <td className="text-blue">Author</td>
-
-      <div>
-        <td className="text-blue">Comments</td>
-        <td className="text-blue">
-          {children}
-        </td>
-        <td className="text-blue">Edit</td>
-      </div>
+      <td className='col'>
+        <p className="category">{category}</p>
+        <p className="title">{title}</p>
+        <p className="text-blue">Author</p>
+        <p className="text-blue">
+          Comments | {children} | Edit
+        </p>
+      </td>
     </tr>
   );
 };
