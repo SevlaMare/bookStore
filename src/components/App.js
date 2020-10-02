@@ -5,7 +5,7 @@ import BooksForm from '../container/BooksForm';
 import CategoryFilter from '../container/CategoryFilter';
 
 const App = () => (
-  <div className={"container"}>
+  <div>
     <CategoryFilter />
     <BooksList />
     <BooksForm />
