@@ -5,7 +5,9 @@ import Book from '../components/Book';
 import { removeBook, filterBooks } from '../actions/index';
 import CategoryFilter from '../components/CategoryFilter';
 
-const BooksList = ({ fetchedBooks, category, remove, filterBooks }) => {
+const BooksList = ({
+  fetchedBooks, remove, filterBooks,
+}) => {
   const handleClick = book => { remove(book); };
   const handleFilterChange = event => filterBooks(event.target.value);
 
@@ -55,6 +57,7 @@ BooksList.propTypes = {
     }),
   ),
   remove: PropTypes.func.isRequired,
+  filterBooks: PropTypes.func.isRequired,
 };
 
 BooksList.defaultProps = {
@@ -62,7 +65,7 @@ BooksList.defaultProps = {
 };
 
 const mapStateToProps = state => ({
-  fetchedBooks: state.book.books.filter(book => book.category === (state.filter || book.category))
+  fetchedBooks: state.book.books.filter(book => book.category === (state.filter || book.category)),
 });
 
 const mapDispatchToProps = dispatch => ({
