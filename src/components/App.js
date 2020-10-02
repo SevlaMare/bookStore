@@ -8,6 +8,7 @@ import CategoryFilter from '../container/CategoryFilter';
 const App = () => (
   <div>
     <Header />
+    <h3>SELECT CATEGORY</h3>
     <CategoryFilter />
     <BooksList />
     <h3>ADD NEW BOOK</h3>

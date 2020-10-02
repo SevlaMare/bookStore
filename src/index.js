@@ -8,7 +8,7 @@ import rootReducer from './reducers/index';
 import App from './components/App';
 import './css/variables.css';
 import './css/style.css';
-import './css/header.css';
+import './css/navbar.css';
 
 const store = createStore(rootReducer);
 

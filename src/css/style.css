@@ -12,8 +12,6 @@ body {
 }
 
 .bookstore {
-  /* REMOVE */
-  border: 5px solid red;
   max-width: 1400px;
   margin: 50px auto;
   border-radius: 4px;
@@ -80,10 +78,8 @@ h3 {
   color: #4386bf;
 }
 
-
-
 /* temporal */
-.header {
+header {
   display: flex;
   justify-content: space-between;
 }
