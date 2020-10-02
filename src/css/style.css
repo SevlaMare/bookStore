@@ -14,7 +14,6 @@ body {
 .bookstore {
   /* REMOVE */
   border: 5px solid red;
-
   max-width: 1400px;
   margin: 50px auto;
   border-radius: 4px;
@@ -23,7 +22,6 @@ body {
 }
 
 .book {
-  display: inline-block;
   min-width: 600px;
   max-width: 1200px;
   height: 170px;
@@ -63,7 +61,6 @@ body {
 }
 
 .text-blue {
-  width: 107px;
   height: 19px;
   font-family: RobotoSlab;
   font-size: 14px;
@@ -73,4 +70,21 @@ body {
   line-height: normal;
   letter-spacing: normal;
   color: #4386bf;
+}
+
+
+
+/* temporal */
+.header {
+  display: flex;
+  justify-content: space-between;
+}
+
+ul {
+  list-style-type: none;
+}
+
+li {
+  display: inline;
+  margin: 0 5px;
 }
