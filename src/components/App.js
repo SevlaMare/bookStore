@@ -10,6 +10,7 @@ const App = () => (
     <Header />
     <CategoryFilter />
     <BooksList />
+    <h3>ADD NEW BOOK</h3>
     <BooksForm />
   </div>
 );
