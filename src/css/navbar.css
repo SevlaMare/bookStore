@@ -1,3 +1,15 @@
+nav {
+  display: flex;
+  align-content: center;
+  justify-content: space-between;
+
+
+  height: 61px;
+  width: 1400px;
+  padding: 29px 100px;
+  background-color: #fff;
+}
+
 .logo {
   width: 240px;
   height: 37px;
@@ -9,6 +21,10 @@
   line-height: normal;
   letter-spacing: normal;
   color: #0290ff;
+}
+
+.float-right {
+  float: right;
 }
 
 .nav-item-2 {
@@ -41,5 +57,6 @@
 }
 
 .img-logo {
-  margin: 23px;
+  margin-right: 23px;
 }
+
