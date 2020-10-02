@@ -1,9 +1,25 @@
-body {
-  background-color: var(--pale-grey);
+body { background-color: #f5f6fa; }
+main { margin: 149px 100px; }
+
+/* TABLE CONTAINER */
+/* .col { margin-bottom: 25px; } NOT WORKING */
+table { border-spacing: 0 30px; }
+
+.f-left { float: left; }
+.percentage_test { width: 60px; }
+
+.vertical-line {
+  height: 60px;
+  border: 3px solid lightgray;
 }
 
+.col-2 {
+  min-width: 300px;
+}
+/* TABLE CONTAINER */
+
+
 .container {
-  margin: 50px auto;
   padding-bottom: 30px;
   border-radius: 4px;
   box-shadow: 0 0 60px 0 var(--black-5);
@@ -108,6 +124,10 @@ select {
   background-color: #0290ff;
 }
 
+.btn-sm {
+  height: 33px;
+}
+
 .btn-txt-bold {
   font-family: RobotoSlab;
   font-size: 13px;
@@ -118,4 +138,9 @@ select {
   letter-spacing: 0.5px;
   text-align: center;
   color: #fff;
+}
+
+.btn-link {
+  border: none;
+  background: none;
 }

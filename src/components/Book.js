@@ -14,14 +14,19 @@ const Book = props => {
           Comments | {children} | Edit
         </p>
       </td>
-      <td>
-        <p>percentaje image</p>
-        <p>percentaje number</p>
+
+      <td className="col-2">
+      <img className="f-left percentage_test" src="img/percentage_test.png" />
+        <p>75%</p>
+        <p>Completed</p>
       </td>
+
+      <hr className="vertical-line"></hr>
+
       <td>
         <h6>CURRENT CHAPTER</h6>
         <p>Chapter 17</p>
-        <button type="button">UPDATE PROGRESS</button>
+        <button className="btn btn-sm" type="button">UPDATE PROGRESS</button>
       </td>
     </tr>
   );

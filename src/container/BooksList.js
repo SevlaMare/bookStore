@@ -20,6 +20,7 @@ const BooksList = ({ fetchedBooks, remove }) => {
             <label htmlFor={`rmv-${book.id}`}>
               <input
                 id={`rmv-${book.id}`}
+                className="text-blue btn-link"
                 name={`rmv-${book.id}`}
                 onClick={() => handleClick(book)}
                 type="button"
