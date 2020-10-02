@@ -12,6 +12,9 @@ body {
 }
 
 .bookstore {
+  /* REMOVE */
+  border: 5px solid red;
+
   max-width: 1400px;
   margin: 50px auto;
   border-radius: 4px;
