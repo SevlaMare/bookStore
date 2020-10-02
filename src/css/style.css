@@ -1,7 +1,6 @@
 body { background-color: #f5f6fa; }
 main { margin: 149px 100px; }
 
-/* TABLE CONTAINER */
 /* .col { margin-bottom: 25px; } NOT WORKING */
 table { border-spacing: 0 30px; }
 
@@ -10,14 +9,21 @@ table { border-spacing: 0 30px; }
 
 .vertical-line {
   height: 60px;
-  border: 3px solid lightgray;
+  border: 1px solid lightgray;
+}
+
+.line-horizontal {
+  border: solid 1px #e8e8e8;
+}
+
+.forms {
+  width: 80%;
+  margin: 0 auto;
 }
 
 .col-2 {
   min-width: 300px;
 }
-/* TABLE CONTAINER */
-
 
 .container {
   padding-bottom: 30px;
