@@ -3,8 +3,23 @@ p { margin: 0; }
 main { margin: 149px 100px; }
 
 /* .col { margin-bottom: 25px; } NOT WORKING */
-table { border-spacing: 0 30px; width: 100%;}
-table td { padding: 20px; }
+table { border-spacing: 0 30px; width: 100%; }
+table td {
+  border-top: thin solid; 
+  border-bottom: thin solid;
+  border-color: #e8e8e8;
+}
+
+table td:first-child {
+  border-left: thin solid;
+  border-color: #e8e8e8;
+}
+
+table td:last-child {
+  border-right: thin solid;
+  border-color: #e8e8e8;
+}
+
 
 .f-left { float: left; }
 .percentage_test { width: 60px; }
@@ -41,7 +56,6 @@ table td { padding: 20px; }
   background-color: #fafafa;
 }
 
-table,
 th,
 tr.book {
   height: 170px;
@@ -49,6 +63,7 @@ tr.book {
   background-color: #ffffff;
   border: 1px solid#e8e8e8;
   border-collapse: collapse;
+  margin: 10px 0;
 }
 
 h3 {
