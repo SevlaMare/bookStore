@@ -8,6 +8,7 @@ table td {
   border-top: thin solid; 
   border-bottom: thin solid;
   border-color: #e8e8e8;
+  padding: 20px;
 }
 
 table td:first-child {
@@ -152,6 +153,10 @@ select {
 
 .btn-sm {
   height: 33px;
+}
+
+.btn-white {
+  color: white;
 }
 
 .btn-txt-bold {

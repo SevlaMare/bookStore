@@ -26,7 +26,7 @@ const Book = props => {
       <td>
         <h6>CURRENT CHAPTER</h6>
         <p>Chapter 17</p>
-        <button className="btn btn-sm" type="button">UPDATE PROGRESS</button>
+        <button className="btn btn-sm btn-white" type="button">UPDATE PROGRESS</button>
       </td>
     </tr>
   );
