@@ -12,9 +12,10 @@ body {
 
 .bookstore {
   margin: 50px auto;
+  padding: 20px 50px;
   border-radius: 4px;
   box-shadow: 0 0 60px 0 var(--black-5);
-  background-color: var(--white);
+  background-color: #fafafa;
 }
 
 .book {
