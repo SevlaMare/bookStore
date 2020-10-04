@@ -1,18 +1,20 @@
 import React from 'react';
+import profileIcon from '../img/profile.svg';
 
 const Header = () => (
-  <header className='header'>
+  <header className="header">
     <nav>
       <ul>
-        <li className="logo">Bookstore</li>
-        <li className="nav-item-2">BOOKS</li>
-        <li className="nav-item-3">CATEGORIES</li>
+        <li>Bookstore CMS</li>
+        <li>BOOKS</li>
+        <li>CATEGORIES</li>
       </ul>
-
-      <div className="login">
-        <img className="img-logo" src="img/profile.png" />
-      </div>
     </nav>
+    <div>
+      <div className="profile-btn">
+        <img src={profileIcon} className='profile-icon' />
+      </div>
+    </div>
   </header>
 );
 
