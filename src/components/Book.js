@@ -7,21 +7,31 @@ const Book = props => {
   return (
     <tr className='book'>
       <td>
-        <p className="category">{category}</p>
-        <p className="title">{title}</p>
-        <p className="text-blue">Author</p>
-        <p className="text-blue">
-          Comments | {children} | Edit
-        </p>
+        <div className='book-info'>
+          <div>
+            <h6 className="book-category">Action</h6>
+            <h2 className="book-title">The Hunger Games</h2>
+            <p className="author">Suzanne Collins</p>
+          </div>
+          <div className="book-footer">
+            <button className="btn-actions" type="button">Comments</button>
+            <button className="btn-actions" type="button">Remove</button>
+            <button className="btn-actions" type="button">Edit</button>
+          </div>
+        </div>
       </td>
 
-      <td className="col-2">
-      <img className="f-left percentage_test" src="img/percentage_test.png" />
-        <p>75%</p>
-        <p>Completed</p>
+      <td className="percentage-col">
+        <div className="percentage-container">
+          <div className="percent-img-container">
+            <img src="../img/progress-bar.png" />
+          </div>
+          <div>
+            <p className="percentage-number">62%</p>
+            <p className="completed">Completed</p>
+          </div>
+        </div>
       </td>
-
-      <hr className="vertical-line"></hr>
 
       <td>
         <h6>CURRENT CHAPTER</h6>
