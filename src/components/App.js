@@ -3,6 +3,7 @@ import React from 'react';
 import Header from './Header';
 import BooksList from '../container/BooksList';
 import BooksForm from '../container/BooksForm';
+import CategoryFilter from './CategoryFilter';
 
 const App = () => (
   <div>
