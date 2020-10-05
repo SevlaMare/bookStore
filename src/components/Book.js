@@ -39,6 +39,7 @@ const Book = props => {
             <h6 className="chapter-title">CURRENT CHAPTER</h6>
             <p className="chapter-number">Chapter 17</p>
           </div>
+
           <button className="update-progress-btn" type="button">UPDATE PROGRESS</button>
         </div>
       </td>

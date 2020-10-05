@@ -60,3 +60,6 @@ select {
 #title, #category {
   margin-right: 34px;
 }
+
+#title::placeholder { color: #c4c4c4; }
+#category::placeholder { color: #c4c4c4; }
