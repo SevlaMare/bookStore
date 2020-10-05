@@ -20,3 +20,7 @@ ReactDOM.render(
   </Provider>,
   document.querySelector('#app'),
 );
+
+import getBooks from './provider';
+
+getBooks().then((body) => { console.log(body) }).catch(err => displayError(err));

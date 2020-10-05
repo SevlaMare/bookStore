@@ -1,9 +1,11 @@
+import "regenerator-runtime/runtime";
+
 const url = 'https://frozen-anchorage-06057.herokuapp.com/api/v1/books';
 
 const getBooks = async () => {
   const response = await fetch(url, {
     method: 'GET',
-    mode: 'cors',
+    // mode: 'cors',
     headers: { Accept: 'application/json', 'Content-Type': 'application/json' },
   });
 
@@ -23,4 +25,6 @@ const saveBook = async (title, category) => {
   return response.json();
 };
 
-export { sendScore, getScore };
+getBooks().then((body) => { console.log(body) }).catch(err => displayError(err));
+
+export { saveBook, getBooks };
