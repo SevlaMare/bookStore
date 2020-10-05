@@ -15,7 +15,7 @@
 }
 
 .btn-txt-bold {
-  font-family: RobotoSlab;
+  font-family: RobotoSlab, serif;
   font-size: 13px;
   font-weight: bold;
   font-stretch: normal;
@@ -47,19 +47,17 @@ select {
 .form h3 {
   margin: 20px 0;
   height: 24px;
-  font-family: Montserrat;
+  font-family: Montserrat, serif;
   font-size: 20px;
   letter-spacing: -0.18px;
-  color: #888888;
+  color: #888;
 }
 
-.form h3:nth-child(4) {
-  margin-bottom: -20px;
-}
+#add-new { margin-bottom: -20px; }
 
-#title, #category {
+#title,
+#category {
   margin-right: 34px;
 }
 
 #title::placeholder { color: #c4c4c4; }
-#category::placeholder { color: #c4c4c4; }

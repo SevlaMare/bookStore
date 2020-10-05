@@ -31,7 +31,7 @@ ul {
 
 li {
   display: inline;
-  font-family: Montserrat;
+  font-family: Montserrat, serif;
   font-size: 13px;
   font-weight: normal;
   font-stretch: normal;
@@ -45,7 +45,7 @@ li {
 li:first-child {
   width: 240px;
   height: 37px;
-  font-family: Montserrat;
+  font-family: Montserrat, serif;
   font-size: 30px;
   font-weight: bold;
   font-stretch: normal;
@@ -83,7 +83,7 @@ li:first-child {
 }
 
 .bookstore td {
-  border-top: thin solid; 
+  border-top: thin solid;
   border-bottom: thin solid;
   border-color: #e8e8e8;
   padding: 20px;
@@ -121,7 +121,7 @@ tr.book {
 
 .book-category {
   opacity: 0.5;
-  font-family: Montserrat;
+  font-family: Montserrat, serif;
   font-size: 14px;
   font-weight: bold;
   font-stretch: normal;
@@ -143,7 +143,7 @@ tr.book {
 }
 
 .author {
-  font-family: "Roboto Slab";
+  font-family: 'Roboto Slab', serif;
   font-size: 14px;
   font-weight: 300;
   font-stretch: normal;
@@ -155,7 +155,7 @@ tr.book {
 
 .btn-actions {
   height: 19px;
-  font-family: "Roboto Slab";
+  font-family: 'Roboto Slab', serif;
   font-size: 14px;
   font-weight: 300;
   font-stretch: normal;
@@ -199,16 +199,15 @@ tr.book {
 
 .chapter-title {
   opacity: 0.5;
-  font-family: RobotoSlab;
+  font-family: RobotoSlab, serif;
   font-size: 13px;
   font-weight: 300;
-
   letter-spacing: normal;
   color: var(--black-three);
 }
 
 .chapter-number {
-  font-family: "Roboto Slab";
+  font-family: 'Roboto Slab', serif;
   font-size: 16px;
   font-weight: 300;
   letter-spacing: -0.4px;
@@ -218,7 +217,6 @@ tr.book {
 .update-progress-btn {
   width: 184px;
   height: 33px;
-  margin-top: 25px;
   border-radius: 3px;
   background-color: var(--azure);
   color: white;
@@ -227,12 +225,12 @@ tr.book {
 }
 
 .add-title {
-  font-family: Montserrat;
+  font-family: Montserrat, serif;
   font-size: 20px;
   font-weight: bold;
   font-stretch: normal;
   font-style: normal;
   line-height: normal;
   letter-spacing: -0.18px;
-  color: #888888;
+  color: #888;
 }

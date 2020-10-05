@@ -13,30 +13,36 @@ const BooksList = ({
 
   return (
     <>
-          <CategoryFilter filterBooks={handleFilterChange} />
-    <table className="bookstore">
-      <tbody>
-        { fetchedBooks.map(book => (
-          <Book
-            key={book.id}
-            id={book.id}
-            title={book.title}
-            category={book.category}
-          >
-            <label htmlFor={`rmv-${book.id}`}>
-              <input
-                id={`rmv-${book.id}`}
-                className="btn-actions"
-                name={`rmv-${book.id}`}
-                onClick={() => handleClick(book)}
-                type="button"
-                value="Remove"
-              />
-            </label>
-          </Book>
-        ))}
-      </tbody>
-    </table>
+      <table className="bookstore">
+        <tbody>
+          { fetchedBooks.map(book => (
+            <Book
+              key={book.id}
+              id={book.id}
+              title={book.title}
+              category={book.category}
+            >
+              <label htmlFor={`rmv-${book.id}`}>
+                <input
+                  id={`rmv-${book.id}`}
+                  className="btn-actions"
+                  name={`rmv-${book.id}`}
+                  onClick={() => handleClick(book)}
+                  type="button"
+                  value="Remove"
+                />
+              </label>
+            </Book>
+          ))}
+        </tbody>
+      </table>
+
+      <hr className="line-horizontal" />
+
+      <article className="form">
+        <h3>SELECT CATEGORY</h3>
+        <CategoryFilter filterBooks={handleFilterChange} />
+      </article>
     </>
   );
 };
