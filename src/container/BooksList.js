@@ -2,10 +2,14 @@ import React from 'react';
 import PropTypes from 'prop-types';
 import { connect } from 'react-redux';
 import Book from '../components/Book';
-import { removeBook } from '../actions/index';
+import { removeBook, filterBooks } from '../actions/index';
+import CategoryFilter from '../components/CategoryFilter';
 
-const BooksList = ({ fetchedBooks, remove }) => {
+const BooksList = ({
+  fetchedBooks, remove, filterBooks,
+}) => {
   const handleClick = book => { remove(book); };
+  const handleFilterChange = event => filterBooks(event.target.value);
 
   return (
     <table className="bookstore">
@@ -43,6 +47,7 @@ BooksList.propTypes = {
     }),
   ),
   remove: PropTypes.func.isRequired,
+  filterBooks: PropTypes.func.isRequired,
 };
 
 BooksList.defaultProps = {
@@ -55,8 +60,10 @@ const mapStateToProps = state => ({
 
 const mapDispatchToProps = dispatch => ({
   remove: book => { dispatch(removeBook(book)); },
+  filterBooks: filter => { dispatch(filterBooks(filter)); },
 });
 
 export default connect(
-  mapStateToProps, mapDispatchToProps,
+  mapStateToProps,
+  mapDispatchToProps,
 )(BooksList);
