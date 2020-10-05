@@ -14,8 +14,8 @@ const Book = props => {
             <p className="author">Suzanne Collins</p>
           </div>
           <div className="book-footer">
-            <input className="btn-actions" type="button" value="Comments" />
-            {children}
+            <input className="btn-actions" type="button" value="Comments" />|
+            {children}|
             <input className="btn-actions" type="button" value="Edit" />
           </div>
         </div>

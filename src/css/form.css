@@ -43,3 +43,20 @@ select {
   border: solid 1px #e8e8e8;
   background-color: #fff;
 }
+
+.form h3 {
+  margin: 20px 0;
+  height: 24px;
+  font-family: Montserrat;
+  font-size: 20px;
+  letter-spacing: -0.18px;
+  color: #888888;
+}
+
+.form h3:nth-child(4) {
+  margin-bottom: -20px;
+}
+
+#title, #category {
+  margin-right: 34px;
+}
