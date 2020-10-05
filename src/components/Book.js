@@ -27,8 +27,8 @@ const Book = props => {
             <img alt="percentage" src="../img/progress-bar.png" />
           </div>
           <div>
-            <p className="percentage-number">62%</p>
-            <p className="completed">Completed</p>
+            <p className="percent percentage-number">62%</p>
+            <p className="t-percent completed">Completed</p>
           </div>
         </div>
       </td>

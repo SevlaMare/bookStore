@@ -12,6 +12,7 @@ body { background-color: #f5f6fa; }
 main {
   margin: 149px 100px;
   box-shadow: 0 0 60px 0 var(--black-5);
+  background-color: #fafafa;
 }
 
 /* header */

@@ -10,17 +10,19 @@ const App = () => (
     <main>
       <Header />
       <BooksList />
+
+      <article className="form">
+        <hr className="line-horizontal" />
+
+        <h3>SELECT CATEGORY</h3>
+        <CategoryFilter />
+
+        <h3>ADD NEW BOOK</h3>
+        <BooksForm />
+      </article>
     </main>
 
-    <article className="forms">
-      <hr className="line-horizontal" />
 
-      <h3>SELECT CATEGORY</h3>
-      <CategoryFilter />
-
-      <h3>ADD NEW BOOK</h3>
-      <BooksForm />
-    </article>
   </div>
 );
 

@@ -1,0 +1,44 @@
+.form {
+  padding: 20px 50px;
+}
+
+.newbook {
+  margin: 40px auto;
+}
+
+.btn {
+  width: 184px;
+  height: 45px;
+  border: none;
+  border-radius: 3px;
+  background-color: #0290ff;
+}
+
+.btn-txt-bold {
+  font-family: RobotoSlab;
+  font-size: 13px;
+  font-weight: bold;
+  font-stretch: normal;
+  font-style: normal;
+  line-height: normal;
+  letter-spacing: 0.5px;
+  text-align: center;
+  color: #fff;
+}
+
+.newbook input {
+  width: 664px;
+  height: 45px;
+  padding-left: 15px;
+  border-radius: 4px;
+  border: solid 1px #e8e8e8;
+  background-color: #fff;
+}
+
+select {
+  width: 285px;
+  height: 45px;
+  border-radius: 4px;
+  border: solid 1px #e8e8e8;
+  background-color: #fff;
+}

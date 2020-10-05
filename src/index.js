@@ -9,6 +9,8 @@ import App from './components/App';
 import './css/variables.css';
 import './css/reset.css';
 import './css/style.css';
+import './css/form.css';
+import './css/book.css';
 
 const store = createStore(rootReducer);
 
