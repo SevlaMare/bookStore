@@ -9,7 +9,6 @@ import App from './components/App';
 import './css/variables.css';
 import './css/reset.css';
 import './css/style.css';
-import './css/navbar.css';
 
 const store = createStore(rootReducer);
 

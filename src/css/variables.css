@@ -1,5 +1,6 @@
 :root {
   --azure: #0290ff;
+  --black-5: rgba(0, 0, 0, 0.05);
   --pale-grey: #f5f6fa;
   --yellow: #fecf33;
   --yellow-15pc: rgba(254, 207, 51, 0.15);
