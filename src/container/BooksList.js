@@ -12,6 +12,8 @@ const BooksList = ({
   const handleFilterChange = event => filterBooks(event.target.value);
 
   return (
+    <>
+          <CategoryFilter filterBooks={handleFilterChange} />
     <table className="bookstore">
       <tbody>
         { fetchedBooks.map(book => (
@@ -35,6 +37,7 @@ const BooksList = ({
         ))}
       </tbody>
     </table>
+    </>
   );
 };
 

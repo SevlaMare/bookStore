@@ -15,7 +15,7 @@ const App = () => (
         <hr className="line-horizontal" />
 
         <h3>SELECT CATEGORY</h3>
-        <CategoryFilter />
+        {/* <CategoryFilter /> */}
 
         <h3>ADD NEW BOOK</h3>
         <BooksForm />
