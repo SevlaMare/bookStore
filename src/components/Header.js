@@ -12,7 +12,7 @@ const Header = () => (
     </nav>
     <div>
       <div className="profile-btn">
-        <img src={profileIcon} className='profile-icon' />
+        <img src={profileIcon} className="profile-icon" alt="profile-icon" />
       </div>
     </div>
   </header>

@@ -13,7 +13,7 @@ const App = () => (
     </main>
 
     <article className="forms">
-      <hr className="line-horizontal"></hr>
+      <hr className="line-horizontal" />
 
       <h3>SELECT CATEGORY</h3>
       <CategoryFilter />

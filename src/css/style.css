@@ -73,8 +73,8 @@ li:first-child {
   border-bottom: thin solid;
   border-color: #e8e8e8;
   padding: 20px;
-  padding-top: 20px;
-  padding-bottom: 20px;
+  padding-top: 25px;
+  padding-bottom: 25px;
   padding-right: 20px;
 }
 
@@ -180,4 +180,55 @@ tr.book {
 
 .percent-img-container {
   margin-right: 10px;
+}
+
+/* stats section */
+
+.current-stats {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  height: 100%;
+}
+
+.chapter-title {
+  opacity: 0.5;
+  font-family: RobotoSlab;
+  font-size: 13px;
+  font-weight: 300;
+
+  letter-spacing: normal;
+  color: var(--black-three);
+}
+
+.chapter-number {
+  font-family: "Roboto Slab";
+  /*font-size: 16px;
+  font-weight: 300;
+  font-stretch: normal;
+  font-style: normal;
+  line-height: normal;
+  letter-spacing: -0.4px;
+  color: var(--black-three);*/
+}
+
+.update-progress-btn {
+  width: 184px;
+  height: 33px;
+  border-radius: 3px;
+  background-color: var(--azure);
+  color: white;
+  border: none;
+  margin-top: 20px;
+}
+
+.add-title {
+  font-family: Montserrat;
+  font-size: 20px;
+  font-weight: bold;
+  font-stretch: normal;
+  font-style: normal;
+  line-height: normal;
+  letter-spacing: -0.18px;
+  color: #888888;
 }
