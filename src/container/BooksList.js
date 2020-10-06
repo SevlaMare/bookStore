@@ -13,16 +13,7 @@ const BooksList = ({
 
   return (
     <>
-      <CategoryFilter filterBooks={handleFilterChange} />
-      <table>
-        <thead>
-          <tr>
-            <th>Book ID</th>
-            <th>Title</th>
-            <th>Category</th>
-          </tr>
-        </thead>
-
+      <table className="bookstore">
         <tbody>
           { fetchedBooks.map(book => (
             <Book
@@ -34,16 +25,24 @@ const BooksList = ({
               <label htmlFor={`rmv-${book.id}`}>
                 <input
                   id={`rmv-${book.id}`}
+                  className="btn-actions"
                   name={`rmv-${book.id}`}
                   onClick={() => handleClick(book)}
                   type="button"
-                  value="remove"
+                  value="Remove"
                 />
               </label>
             </Book>
           ))}
         </tbody>
       </table>
+
+      <hr className="line-horizontal" />
+
+      <article className="form">
+        <h3>SELECT CATEGORY</h3>
+        <CategoryFilter filterBooks={handleFilterChange} />
+      </article>
     </>
   );
 };

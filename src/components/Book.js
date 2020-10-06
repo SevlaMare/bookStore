@@ -2,24 +2,54 @@ import React from 'react';
 import PropTypes from 'prop-types';
 
 const Book = props => {
-  const {
-    id, title, category, children,
-  } = props;
+  const { title, category, children } = props;
 
   return (
-    <tr>
-      <td>{id}</td>
-      <td>{title}</td>
-      <td>{category}</td>
+    <tr className="book">
       <td>
-        {children}
+        <div className="book-info">
+          <div>
+            <h6 className="book-category">{category}</h6>
+            <h2 className="book-title">{title}</h2>
+            <p className="author">Suzanne Collins</p>
+          </div>
+          <div className="book-footer">
+            <input className="btn-actions" type="button" value="Comments" />
+            |
+            {children}
+            |
+            <input className="btn-actions" type="button" value="Edit" />
+          </div>
+        </div>
+      </td>
+
+      <td className="percentage-col">
+        <div className="percentage-container">
+          <div className="percent-img-container">
+            <img alt="percentage" src="../img/progress-bar.png" />
+          </div>
+          <div>
+            <p className="percent percentage-number">62%</p>
+            <p className="t-percent completed">Completed</p>
+          </div>
+        </div>
+      </td>
+
+      <td>
+        <div className="current-stats">
+          <div>
+            <h6 className="chapter-title">CURRENT CHAPTER</h6>
+            <p className="chapter-number">Chapter 17</p>
+          </div>
+
+          <button className="update-progress-btn" type="button">UPDATE PROGRESS</button>
+        </div>
       </td>
     </tr>
   );
 };
 
 Book.propTypes = {
-  id: PropTypes.number.isRequired,
   title: PropTypes.string.isRequired,
   category: PropTypes.string.isRequired,
   children: PropTypes.shape().isRequired,

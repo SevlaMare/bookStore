@@ -1,0 +1,15 @@
+.percent {
+  height: 39px;
+  font-family: Montserrat, serif;
+  font-size: 32px;
+  font-weight: normal;
+  font-stretch: normal;
+}
+
+.t-percent {
+  height: 18px;
+  opacity: 0.5;
+  font-family: Montserrat, serif;
+  font-size: 14px;
+  color: #121212;
+}

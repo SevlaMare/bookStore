@@ -1,6 +1,7 @@
 const HtmlWebpackPlugin = require('html-webpack-plugin');
 const MiniCssExtractPlugin = require('mini-css-extract-plugin');
 const CssMinimizerPlugin = require('css-minimizer-webpack-plugin');
+const CopyPlugin = require('copy-webpack-plugin');
 const path = require('path');
 
 module.exports = {
@@ -91,5 +92,11 @@ module.exports = {
     }),
 
     new CssMinimizerPlugin(),
+
+    new CopyPlugin({
+      patterns: [
+        { from: 'src/img', to: './img' },
+      ],
+    }),
   ],
 };
