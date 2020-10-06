@@ -1,15 +1,21 @@
-import React, { Component, useState } from 'react';
-import Content from './Content'
+import React from 'react';
 
-const App = props => {
-  const [ fromState ] = useState('StateName');
+import Header from './Header';
+import BooksList from '../container/BooksList';
+import BooksForm from '../container/BooksForm';
 
-  return (
-    <React.Fragment>
-      <h1>Template</h1>
-      <Content nickname={ fromState }></Content>
-    </React.Fragment>
-  );
-}
+const App = () => (
+  <div>
+    <main>
+      <Header />
+      <BooksList />
+
+      <article className="form">
+        <h3 id="add-new">ADD NEW BOOK</h3>
+        <BooksForm />
+      </article>
+    </main>
+  </div>
+);
 
 export default App;

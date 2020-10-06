@@ -1,4 +1,236 @@
-body {
-  margin: 0;
-  padding: 0;
+@import url('https://fonts.googleapis.com/css2?family=Roboto+Slab:wght@300;700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Montserrat&display=swap');
+
+body { background-color: #f5f6fa; }
+
+.app {
+  max-width: 1400px;
+  margin: 0 auto;
+  background-color: white;
+  border-radius: 4px;
+}
+
+main {
+  margin: 149px 100px;
+  box-shadow: 0 0 60px 0 var(--black-5);
+  background-color: #fafafa;
+}
+
+.header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 0 30px;
+  border-bottom: 2px solid #e8e8e8;
+  background-color: white;
+}
+
+ul {
+  list-style-type: none;
+}
+
+li {
+  display: inline;
+  font-family: Montserrat, serif;
+  font-size: 13px;
+  font-weight: normal;
+  font-stretch: normal;
+  font-style: normal;
+  line-height: normal;
+  letter-spacing: 1.9px;
+  color: var(--black-three);
+  margin: 0 15px;
+}
+
+li:first-child {
+  width: 240px;
+  height: 37px;
+  font-family: Montserrat, serif;
+  font-size: 30px;
+  font-weight: bold;
+  font-stretch: normal;
+  font-style: normal;
+  line-height: normal;
+  letter-spacing: normal;
+  color: var(--azure);
+}
+
+.profile-btn {
+  width: 45px;
+  height: 45px;
+  border: solid 1px #e8e8e8;
+  border-radius: 50%;
+  margin: 15px;
+  display: flex;
+  align-items: center;
+}
+
+.profile-icon {
+  margin: 0 auto;
+  display: block;
+  width: 17px;
+  height: 17px;
+}
+
+.bookstore {
+  width: 100%;
+  height: 100px;
+  margin: 0 auto;
+  border-collapse: separate;
+  border-spacing: 0 30px;
+  background-color: #fafafa;
+  padding: 20px 50px;
+}
+
+.bookstore td {
+  border-top: thin solid;
+  border-bottom: thin solid;
+  border-color: #e8e8e8;
+  padding: 20px;
+  padding-top: 25px;
+  padding-bottom: 25px;
+  padding-right: 20px;
+}
+
+.bookstore td:first-child {
+  border-left: thin solid;
+  border-color: #e8e8e8;
+  padding-left: 20px;
+  padding-right: 0;
+}
+
+.bookstore td:last-child {
+  border-right: thin solid;
+  border-color: #e8e8e8;
+}
+
+tr.book {
+  padding: 20px;
+  height: 170px;
+  border-collapse: collapse;
+  margin: 10px 0;
+  background-color: white;
+}
+
+.book-info {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  height: 100%;
+}
+
+.book-category {
+  opacity: 0.5;
+  font-family: Montserrat, serif;
+  font-size: 14px;
+  font-weight: bold;
+  font-stretch: normal;
+  font-style: normal;
+  line-height: normal;
+  letter-spacing: normal;
+  color: var(--black-three);
+}
+
+.book-title {
+  font-family: 'Roboto Slab', serif;
+  font-size: 22px;
+  font-weight: bold;
+  font-stretch: normal;
+  font-style: normal;
+  line-height: normal;
+  letter-spacing: -0.2px;
+  color: var(--black-three);
+}
+
+.author {
+  font-family: 'Roboto Slab', serif;
+  font-size: 14px;
+  font-weight: 300;
+  font-stretch: normal;
+  font-style: normal;
+  line-height: normal;
+  letter-spacing: normal;
+  color: #4386bf;
+}
+
+.btn-actions {
+  height: 19px;
+  font-family: 'Roboto Slab', serif;
+  font-size: 14px;
+  font-weight: 300;
+  font-stretch: normal;
+  font-style: normal;
+  line-height: normal;
+  letter-spacing: normal;
+  color: #4386bf;
+  border: none;
+  background-color: white;
+}
+
+.btn-actions:nth-child(2) {
+  border-left: 1px solid #e8e8e8;
+  border-right: 1px solid #e8e8e8;
+}
+
+.btn-actions:hover {
+  cursor: pointer;
+}
+
+.percentage-col {
+  vertical-align: middle;
+}
+
+.percentage-container {
+  display: flex;
+  border-right: 2px solid #e8e8e8;
+  padding: 5px;
+  align-items: center;
+}
+
+.percent-img-container {
+  margin-right: 10px;
+}
+
+.current-stats {
+  display: flex;
+  flex-direction: column;
+  height: 100%;
+}
+
+.chapter-title {
+  opacity: 0.5;
+  font-family: RobotoSlab, serif;
+  font-size: 13px;
+  font-weight: 300;
+  letter-spacing: normal;
+  color: var(--black-three);
+}
+
+.chapter-number {
+  font-family: 'Roboto Slab', serif;
+  font-size: 16px;
+  font-weight: 300;
+  letter-spacing: -0.4px;
+  color: var(--black-three);
+}
+
+.update-progress-btn {
+  width: 184px;
+  height: 33px;
+  border-radius: 3px;
+  background-color: var(--azure);
+  color: white;
+  border: none;
+  margin-top: 20px;
+}
+
+.add-title {
+  font-family: Montserrat, serif;
+  font-size: 20px;
+  font-weight: bold;
+  font-stretch: normal;
+  font-style: normal;
+  line-height: normal;
+  letter-spacing: -0.18px;
+  color: #888;
 }
